@@ -14,6 +14,12 @@
 		B586BFA324254D6800087E90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586BFA224254D6800087E90 /* Preview Assets.xcassets */; };
 		B586BFA624254D6800087E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B586BFA424254D6800087E90 /* LaunchScreen.storyboard */; };
 		B586BFB124254D6800087E90 /* MockoloDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BFB024254D6800087E90 /* MockoloDemoTests.swift */; };
+		B586BFBD24254DE800087E90 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BFBC24254DE800087E90 /* GeneratedMocks.swift */; };
+		B586BFBF24254E0500087E90 /* MyFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BFBE24254E0500087E90 /* MyFlow.swift */; };
+		B586BFC124254E1F00087E90 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BFC024254E1F00087E90 /* NetworkProtocol.swift */; };
+		B586BFC324254EBE00087E90 /* ErrorFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BFC224254EBE00087E90 /* ErrorFlow.swift */; };
+		B586BFC524254ECE00087E90 /* SuccessFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BFC424254ECE00087E90 /* SuccessFlow.swift */; };
+		B586BFC724254EDA00087E90 /* Flowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BFC624254EDA00087E90 /* Flowing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,13 @@
 		B586BFAC24254D6800087E90 /* MockoloDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockoloDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586BFB024254D6800087E90 /* MockoloDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockoloDemoTests.swift; sourceTree = "<group>"; };
 		B586BFB224254D6800087E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B586BFBC24254DE800087E90 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		B586BFBE24254E0500087E90 /* MyFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlow.swift; sourceTree = "<group>"; };
+		B586BFC024254E1F00087E90 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		B586BFC224254EBE00087E90 /* ErrorFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFlow.swift; sourceTree = "<group>"; };
+		B586BFC424254ECE00087E90 /* SuccessFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessFlow.swift; sourceTree = "<group>"; };
+		B586BFC624254EDA00087E90 /* Flowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flowing.swift; sourceTree = "<group>"; };
+		B586BFC82425524800087E90 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +74,7 @@
 		B586BF8D24254D6700087E90 = {
 			isa = PBXGroup;
 			children = (
+				B586BFC82425524800087E90 /* README.md */,
 				B586BF9824254D6700087E90 /* MockoloDemo */,
 				B586BFAF24254D6800087E90 /* MockoloDemoTests */,
 				B586BF9724254D6700087E90 /* Products */,
@@ -86,6 +100,11 @@
 				B586BFA424254D6800087E90 /* LaunchScreen.storyboard */,
 				B586BFA724254D6800087E90 /* Info.plist */,
 				B586BFA124254D6800087E90 /* Preview Content */,
+				B586BFBE24254E0500087E90 /* MyFlow.swift */,
+				B586BFC024254E1F00087E90 /* NetworkProtocol.swift */,
+				B586BFC224254EBE00087E90 /* ErrorFlow.swift */,
+				B586BFC424254ECE00087E90 /* SuccessFlow.swift */,
+				B586BFC624254EDA00087E90 /* Flowing.swift */,
 			);
 			path = MockoloDemo;
 			sourceTree = "<group>";
@@ -101,6 +120,7 @@
 		B586BFAF24254D6800087E90 /* MockoloDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				B586BFBC24254DE800087E90 /* GeneratedMocks.swift */,
 				B586BFB024254D6800087E90 /* MockoloDemoTests.swift */,
 				B586BFB224254D6800087E90 /* Info.plist */,
 			);
@@ -131,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B586BFB824254D6800087E90 /* Build configuration list for PBXNativeTarget "MockoloDemoTests" */;
 			buildPhases = (
+				B586BFBB24254D7700087E90 /* Mockolo */,
 				B586BFA824254D6800087E90 /* Sources */,
 				B586BFA924254D6800087E90 /* Frameworks */,
 				B586BFAA24254D6800087E90 /* Resources */,
@@ -203,13 +224,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B586BFBB24254D7700087E90 /* Mockolo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Mockolo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mockolo -i MockoloDemo -s MockoloDemo -d ./MockoloDemoTests/GeneratedMocks.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B586BF9224254D6700087E90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B586BFC324254EBE00087E90 /* ErrorFlow.swift in Sources */,
 				B586BF9A24254D6700087E90 /* AppDelegate.swift in Sources */,
+				B586BFBF24254E0500087E90 /* MyFlow.swift in Sources */,
+				B586BFC124254E1F00087E90 /* NetworkProtocol.swift in Sources */,
 				B586BF9C24254D6700087E90 /* SceneDelegate.swift in Sources */,
+				B586BFC524254ECE00087E90 /* SuccessFlow.swift in Sources */,
+				B586BFC724254EDA00087E90 /* Flowing.swift in Sources */,
 				B586BF9E24254D6700087E90 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B586BFB124254D6800087E90 /* MockoloDemoTests.swift in Sources */,
+				B586BFBD24254DE800087E90 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
